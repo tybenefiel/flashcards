@@ -1,14 +1,13 @@
+<link rel="stylesheet" href="/css/styles.css">
+
+<h1>KIEI 925</h1>
+<h1>Fall 2013</h1>
+
 <ul>
+<% @student_data.each do |pic| %>
   <li>
-    <img width='200' src='https://www.kellogg.northwestern.edu/images/students/all/x402651.jpg'>
-    <h3>Jocelyn Alt</h3>
+    <p>First name: <%= pic["first_name"] %></p>
+    <p>Last name: <%= pic["last_name"] %></p>
+    <img width = "200" src = <%= pic["image_url"] %>
   </li>
-  <li>
-    <img width='200' src='https://www.kellogg.northwestern.edu/images/students/all/x410579.jpg'>
-    <h3>Ty Benefiel</h3>
-    </li>
-  <li>
-    <img width='200' src='https://www.kellogg.northwestern.edu/images/students/all/x417523.jpg'>
-    <h3>Nick Chin</h3>
-  </li>
-</ul>
+<% end %>
